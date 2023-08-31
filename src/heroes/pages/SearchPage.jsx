@@ -34,7 +34,7 @@ export const SearchPage = () => {
         <div className="col-5">
           <h4>Searching</h4>
           <hr />
-          <form onSubmit={onSearchSubmit}>
+          <form data-testid="search-form" onSubmit={onSearchSubmit}>
             <input
               type="text"
               placeholder="Search a hero..."
@@ -51,6 +51,7 @@ export const SearchPage = () => {
           <h4>Results</h4>
           <hr />
           <div
+            data-testid="alert-search"
             className={`alert alert-secondary animate__animated animate__fadeIn ${
               showSearch ? '' : 'd-none'
             }`}
@@ -59,6 +60,7 @@ export const SearchPage = () => {
             Search a hero
           </div>
           <div
+            data-testid="alert-not-found"
             className={`alert alert-danger animate__animated animate__fadeIn ${
               showError ? '' : 'd-none'
             }`}
@@ -66,7 +68,7 @@ export const SearchPage = () => {
           >
             Not hero with <b>{q}</b>
           </div>
-          <div className='d-flex flex-wrap gap-3'>
+          <div className="d-flex flex-wrap gap-3">
             {heroes.map((hero) => (
               <HeroCard key={hero.id} {...hero} />
             ))}

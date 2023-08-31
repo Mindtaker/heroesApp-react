@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchPage tests should show the default values 1`] = `
+<div>
+  <h1>
+    SearchPage
+  </h1>
+  <hr />
+  <div
+    class="row"
+  >
+    <div
+      class="col-5"
+    >
+      <h4>
+        Searching
+      </h4>
+      <hr />
+      <form
+        data-testid="search-form"
+      >
+        <input
+          autocomplete="off"
+          class="form-control"
+          name="searchText"
+          placeholder="Search a hero..."
+          type="text"
+          value=""
+        />
+        <button
+          class="btn btn-dark mt-3"
+        >
+          Search
+        </button>
+      </form>
+    </div>
+    <div
+      class="col-7"
+    >
+      <h4>
+        Results
+      </h4>
+      <hr />
+      <div
+        class="alert alert-secondary animate__animated animate__fadeIn "
+        data-testid="alert-search"
+        role="alert"
+      >
+        Search a hero
+      </div>
+      <div
+        class="alert alert-danger animate__animated animate__fadeIn d-none"
+        data-testid="alert-not-found"
+        role="alert"
+      >
+        Not hero with 
+        <b />
+      </div>
+      <div
+        class="d-flex flex-wrap gap-3"
+      />
+    </div>
+  </div>
+</div>
+`;
